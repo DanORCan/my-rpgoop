@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,22 +21,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ENP-er-1si">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="m6Q-1f-2N3">
-                                <rect key="frame" x="0.0" y="520" width="600" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="u6h-d3-TXm">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="iGf-Af-r3m"/>
+                                    <constraint firstAttribute="height" constant="60" id="wUx-QW-wZ3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-holder" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-1I-cBP">
+                                <rect key="frame" x="80" y="545" width="488" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="O0V-BC-mZG"/>
+                                    <constraint firstAttribute="width" constant="488" id="XgP-di-btO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ENP-er-1si" secondAttribute="trailing" id="7cy-Ef-Gct"/>
-                            <constraint firstItem="ENP-er-1si" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Iq-3q-TyB"/>
-                            <constraint firstItem="m6Q-1f-2N3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aw1-hL-FNp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m6Q-1f-2N3" secondAttribute="bottom" id="IhX-Zi-bXW"/>
-                            <constraint firstAttribute="trailing" secondItem="m6Q-1f-2N3" secondAttribute="trailing" id="IxW-W4-neF"/>
-                            <constraint firstItem="ENP-er-1si" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="icr-RP-oEz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ENP-er-1si" secondAttribute="bottom" id="ouZ-Yo-FBY"/>
+                            <constraint firstAttribute="bottom" secondItem="u6h-d3-TXm" secondAttribute="bottom" id="3uM-ZG-Wax"/>
+                            <constraint firstItem="GVi-1I-cBP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="H5F-tT-dph"/>
+                            <constraint firstAttribute="trailing" secondItem="u6h-d3-TXm" secondAttribute="trailing" id="Ng8-OD-R0w"/>
+                            <constraint firstItem="u6h-d3-TXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QiJ-x7-qZD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ENP-er-1si" secondAttribute="bottom" id="Tbn-QT-wRV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GVi-1I-cBP" secondAttribute="bottom" constant="8" id="f5n-7E-bh7"/>
+                            <constraint firstAttribute="trailing" secondItem="ENP-er-1si" secondAttribute="trailing" id="kPr-uz-TpK"/>
+                            <constraint firstItem="ENP-er-1si" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="m0o-O3-L4o"/>
+                            <constraint firstItem="ENP-er-1si" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nTo-wk-855"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,5 +57,6 @@
     <resources>
         <image name="bg" width="1024" height="677"/>
         <image name="ground" width="1024" height="106"/>
+        <image name="text-holder" width="696" height="106"/>
     </resources>
 </document>
