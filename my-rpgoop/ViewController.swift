@@ -4,7 +4,6 @@
 //
 //  Created by DANIEL OREILLY on 12/14/15.
 //  Copyright © 2015 DANIEL OREILLY. All rights reserved.
-//  modelled on rpgoop
 
 
 import UIKit
