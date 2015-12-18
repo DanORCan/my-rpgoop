@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431F193F1C23535A000E14F7 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 431F193E1C23535A000E14F7 /* Minecraft.ttf */; };
+		431F19411C23A411000E14F7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431F19401C23A411000E14F7 /* Character.swift */; };
 		433B3EEA1C1F6B780047D0F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B3EE91C1F6B780047D0F4 /* AppDelegate.swift */; };
 		433B3EEC1C1F6B780047D0F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433B3EEB1C1F6B780047D0F4 /* ViewController.swift */; };
 		433B3EEF1C1F6B780047D0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433B3EED1C1F6B780047D0F4 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		431F193E1C23535A000E14F7 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		431F19401C23A411000E14F7 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		433B3EE61C1F6B780047D0F4 /* my-rpgoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "my-rpgoop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		433B3EE91C1F6B780047D0F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		433B3EEB1C1F6B780047D0F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				431F193E1C23535A000E14F7 /* Minecraft.ttf */,
 				433B3EE91C1F6B780047D0F4 /* AppDelegate.swift */,
 				433B3EEB1C1F6B780047D0F4 /* ViewController.swift */,
+				431F19401C23A411000E14F7 /* Character.swift */,
 				433B3EED1C1F6B780047D0F4 /* Main.storyboard */,
 				433B3EF01C1F6B780047D0F4 /* Assets.xcassets */,
 				433B3EF21C1F6B780047D0F4 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431F19411C23A411000E14F7 /* Character.swift in Sources */,
 				433B3EEC1C1F6B780047D0F4 /* ViewController.swift in Sources */,
 				433B3EEA1C1F6B780047D0F4 /* AppDelegate.swift in Sources */,
 			);
