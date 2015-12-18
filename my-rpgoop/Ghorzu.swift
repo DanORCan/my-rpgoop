@@ -9,5 +9,6 @@
 import Foundation
 
 class Ghorzu: Orc {
-    //complete
+    
+    //may not need this class
 }

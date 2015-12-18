@@ -47,6 +47,13 @@
                                     <constraint firstAttribute="width" constant="160" id="OJo-oD-RWN"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-CG-GHu" userLabel="soldier">
+                                <rect key="frame" x="330" y="362" width="160" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="dkk-9e-Rlh"/>
+                                    <constraint firstAttribute="height" constant="180" id="ilX-ES-np2"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcE-PB-Qm6">
                                 <rect key="frame" x="50" y="290" width="150" height="60"/>
                                 <constraints>
@@ -78,22 +85,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xer-nY-i5w" userLabel="HP label L">
-                                <rect key="frame" x="20" y="384" width="76" height="23"/>
+                                <rect key="frame" x="20" y="357" width="76" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75.5" id="HZW-Db-mgh"/>
-                                    <constraint firstAttribute="height" constant="23.5" id="Xm1-Un-4Vq"/>
+                                    <constraint firstAttribute="height" constant="50" id="Xm1-Un-4Vq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akX-Ny-sfL" userLabel="HP label R">
-                                <rect key="frame" x="504" y="384" width="76" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akX-Ny-sfL" userLabel="HP label R">
+                                <rect key="frame" x="504" y="357" width="76" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23.5" id="RIe-Hi-HZ5"/>
+                                    <constraint firstAttribute="height" constant="50" id="RIe-Hi-HZ5"/>
                                     <constraint firstAttribute="width" constant="75.5" id="mRz-XA-gmJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,13 +118,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-CG-GHu" userLabel="soldier">
-                                <rect key="frame" x="330" y="362" width="160" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="dkk-9e-Rlh"/>
-                                    <constraint firstAttribute="height" constant="180" id="ilX-ES-np2"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inventory L" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EI-qg-3NX">
                                 <rect key="frame" x="20" y="424" width="71" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -176,6 +176,14 @@
                             <constraint firstItem="d5y-z7-2OU" firstAttribute="top" secondItem="ZcE-PB-Qm6" secondAttribute="bottom" constant="10" id="z1h-iH-fLG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblAttackL" destination="Q1J-NF-yzI" id="aPH-xh-QZZ"/>
+                        <outlet property="lblAttackR" destination="HKT-KC-qBB" id="GfU-3n-hWr"/>
+                        <outlet property="lblHpL" destination="Xer-nY-i5w" id="Mtz-E8-4Vc"/>
+                        <outlet property="lblHpR" destination="akX-Ny-sfL" id="p27-UR-Ukl"/>
+                        <outlet property="lblInvL" destination="3EI-qg-3NX" id="ehe-GJ-KXM"/>
+                        <outlet property="lblInvR" destination="1fX-mm-UId" id="1gg-uV-Wcx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
