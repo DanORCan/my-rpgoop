@@ -1,5 +1,5 @@
 //
-//  Soldier.swift
+//  Orc.swift
 //  my-rpgoop
 //
 //  Created by DANIEL OREILLY on 12/17/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Soldier: Character {
+class Orc: Character {
     private var _name = "Soldier"
     
     var name: String {
@@ -17,7 +17,7 @@ class Soldier: Character {
         }
     }
     
-    private var _inventory: [String] = ["spear","shield","helmet"]  //basic inventory 
+    private var _inventory: [String] = ["club","knife","shield"]  //basic inventory
     
     var inventory: [String] {
         return _inventory
