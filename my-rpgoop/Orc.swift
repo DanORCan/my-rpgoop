@@ -9,7 +9,7 @@
 import Foundation
 
 class Orc: Character {
-    private var _name = "Soldier"
+    private var _name = "Orc"
     
     var name: String {
         get {
@@ -32,4 +32,13 @@ class Orc: Character {
         _name = name
     }
     
+    func loseInventory() -> String? {
+        if !isAlive {
+            
+            let rand = Int(arc4random_uniform(UInt32(inventory.count)))
+            return inventory[rand]
+        }
+        
+        return nil
+    }
 }
