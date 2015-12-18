@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         lblInvR.text = listInventory(lancelot.inventory)
 
         lblHpL.text = "\(ghorzu.name)  \(ghorzu.hp) HP"
-        lblInvL.text = "\(ghorzu.inventory)"
+        lblInvL.text = listInventory(ghorzu.inventory)
 
     
     }
