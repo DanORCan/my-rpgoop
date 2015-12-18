@@ -40,14 +40,14 @@
                                     <constraint firstAttribute="width" constant="488" id="XgP-di-btO"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-CG-GHu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-CG-GHu" userLabel="soldier">
                                 <rect key="frame" x="400" y="362" width="160" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="dkk-9e-Rlh"/>
                                     <constraint firstAttribute="height" constant="180" id="ilX-ES-np2"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-z7-2OU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-z7-2OU" userLabel="orc">
                                 <rect key="frame" x="40" y="360" width="160" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="Bo1-93-7ht"/>
