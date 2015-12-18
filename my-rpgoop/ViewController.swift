@@ -29,13 +29,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         lancelot = Soldier(name: "Lancelot", hp: 110, attackPwr: 20)
+        ghorzu = Orc(name: "Ghorzu", hp: 130, attackPwr: 30)
         
         lblHpR.text = "\(lancelot.name)  \(lancelot.hp) HP"
-        lblInvR.text = "\(lancelot.inventory)"
+        lblInvR.text = listInventory(lancelot.inventory)
+
+        lblHpL.text = "\(ghorzu.name)  \(ghorzu.hp) HP"
+        lblInvL.text = "\(ghorzu.inventory)"
 
     
     }
 
+    func listInventory(inventory:[String]) ->String {
+        var list = ""
+        for item in inventory {
+            list += "\(item) \n"
+        }
+        return list
+    }
 
 }
 
