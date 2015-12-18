@@ -100,8 +100,8 @@
                                 <rect key="frame" x="268" y="21" width="64" height="64"/>
                                 <state key="normal" image="restart_0"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Display results of actions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Ne-Ba2">
-                                <rect key="frame" x="98" y="557" width="403" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display results of actions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Ne-Ba2">
+                                <rect key="frame" x="98" y="556" width="403" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="00F-Ez-aDG"/>
                                     <constraint firstAttribute="width" constant="403" id="uMA-Fx-4z2"/>
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="225"/>
+            <point key="canvasLocation" x="40" y="121"/>
         </scene>
     </scenes>
     <resources>
