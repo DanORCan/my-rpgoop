@@ -33,25 +33,29 @@ class ViewController: UIViewController {
         soldier = Soldier(name: "Lancelot", hp: 110, attackPwr: 20)
         orc = Orc(name: "Ghorzu", hp: 130, attackPwr: 30)
         
-        lblHpR.text = "\(soldier.name)  \(soldier.hp) HP"
+        lblHpR.text = "\(soldier.name)\n\(soldier.hp) HP"
         lblInvR.text = listInventory(soldier.inventory)
 
-        lblHpL.text = "\(orc.name)  \(orc.hp) HP"
+        lblHpL.text = "\(orc.name)\n\(orc.hp) HP"
         lblInvL.text = listInventory(orc.inventory)
-
-    
     }
 
     @IBAction func orcAttackBtn(sender: AnyObject) {
-        if soldier.attemptAttack(orc.attackPwr) {
+        if orc.attemptAttack(orc.attackPwr) {
+            displayResLbl.text = "\(orc.name) attacked \(soldier.name) for \(orc.attackPwr) HP"
+            
+            lblHpL.text = "\(orc.name)\n\(orc.hp) HP"
+            lblInvR.text = listInventory(soldier.inventory)
             
         }
     }
     
     @IBAction func soldierAttackBtn(sender: AnyObject) {
-        if orc.attemptAttack(soldier.attackPwr) {
+        
+        if soldier.attemptAttack(soldier.attackPwr) {
             displayResLbl.text = "\(soldier.name) attacked \(orc.name) for \(soldier.attackPwr) HP"
-            lblInvL.text = "\(orc.name)  \(orc.hp) HP"
+            
+            lblHpR.text = "\(soldier.name)\n\(soldier.hp) HP"
             lblInvL.text = listInventory(orc.inventory)
         }
     }

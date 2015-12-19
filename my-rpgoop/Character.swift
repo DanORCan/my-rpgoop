@@ -40,7 +40,14 @@ class Character {
     }
     
     func attemptAttack(attackPwr: Int) -> Bool {
+
+        print(self._hp)  // temporary        
         self._hp -= attackPwr
+        print(attackPwr) // temporary
+        print("test") // temporary
+        print(self._hp)  // temporary
+        print(self.hp)  // temporary
+        print(self.attackPwr) // temporary
         return true
     }
 }
