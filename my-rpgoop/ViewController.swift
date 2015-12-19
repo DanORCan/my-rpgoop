@@ -22,26 +22,43 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblInvR: UILabel!
     
-    var lancelot: Soldier!
-    var ghorzu: Orc!
+    @IBOutlet weak var displayResLbl: UILabel!
+    
+    var soldier: Soldier!
+    var orc: Orc!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lancelot = Soldier(name: "Lancelot", hp: 110, attackPwr: 20)
-        ghorzu = Orc(name: "Ghorzu", hp: 130, attackPwr: 30)
+        soldier = Soldier(name: "Lancelot", hp: 110, attackPwr: 20)
+        orc = Orc(name: "Ghorzu", hp: 130, attackPwr: 30)
         
-        lblHpR.text = "\(lancelot.name)  \(lancelot.hp) HP"
-        lblInvR.text = listInventory(lancelot.inventory)
+        lblHpR.text = "\(soldier.name)  \(soldier.hp) HP"
+        lblInvR.text = listInventory(soldier.inventory)
 
-        lblHpL.text = "\(ghorzu.name)  \(ghorzu.hp) HP"
-        lblInvL.text = listInventory(ghorzu.inventory)
+        lblHpL.text = "\(orc.name)  \(orc.hp) HP"
+        lblInvL.text = listInventory(orc.inventory)
 
     
     }
 
+    @IBAction func orcAttackBtn(sender: AnyObject) {
+        if soldier.attemptAttack(orc.attackPwr) {
+            
+        }
+    }
+    
+    @IBAction func soldierAttackBtn(sender: AnyObject) {
+        if orc.attemptAttack(soldier.attackPwr) {
+            displayResLbl.text = "\(soldier.name) attacked \(orc.name) for \(soldier.attackPwr) HP"
+            lblInvL.text = "\(orc.name)  \(orc.hp) HP"
+            lblInvL.text = listInventory(orc.inventory)
+        }
+    }
+
+    
     func listInventory(inventory:[String]) ->String {
-        var list = ""
+        var list = "\n"
         for item in inventory {
             list += "\(item) \n"
         }

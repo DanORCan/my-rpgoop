@@ -17,7 +17,7 @@ class Soldier: Character {
         }
     }
     
-    private var _inventory: [String] = ["spear","shield","helmet"]  //basic inventory 
+    private var _inventory: [String] = ["spear","shield","helmet","diamond","wine"]  //basic inventory
     
     var inventory: [String] {
         return _inventory

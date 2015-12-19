@@ -17,7 +17,7 @@ class Orc: Character {
         }
     }
     
-    private var _inventory: [String] = ["club","knife","shield"]  //basic inventory
+    private var _inventory: [String] = ["club","knife","shield","beer","leather"]  //basic inventory
     
     var inventory: [String] {
         return _inventory

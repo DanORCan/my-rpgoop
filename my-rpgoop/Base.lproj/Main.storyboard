@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="180" id="ilX-ES-np2"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcE-PB-Qm6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcE-PB-Qm6" userLabel="orcAttackBtn">
                                 <rect key="frame" x="50" y="290" width="150" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="ftp-2e-IQb"/>
@@ -62,8 +62,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="orcAttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mei-9z-7hg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AW-Fs-NbM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AW-Fs-NbM" userLabel="soldierAttackBtn">
                                 <rect key="frame" x="410" y="292" width="150" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4Zx-xe-4X6"/>
@@ -71,14 +74,17 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
                                 <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="soldierAttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QzG-gi-QSc"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1J-NF-yzI" userLabel="Lbl Left ATTACK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1J-NF-yzI" userLabel="orcLblAttack">
                                 <rect key="frame" x="77" y="308" width="96" height="24"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKT-KC-qBB" userLabel="Lbl Right ATTACK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKT-KC-qBB" userLabel="soldierLblAttack">
                                 <rect key="frame" x="437" y="310" width="96" height="24"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,6 +183,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="displayResLbl" destination="6NQ-Ne-Ba2" id="B0H-4N-FbB"/>
                         <outlet property="lblAttackL" destination="Q1J-NF-yzI" id="aPH-xh-QZZ"/>
                         <outlet property="lblAttackR" destination="HKT-KC-qBB" id="GfU-3n-hWr"/>
                         <outlet property="lblHpL" destination="Xer-nY-i5w" id="Mtz-E8-4Vc"/>
