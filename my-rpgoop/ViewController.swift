@@ -33,20 +33,16 @@ class ViewController: UIViewController {
         soldier = Soldier(name: "Lancelot", hp: 110, attackPwr: 20)
         orc = Orc(name: "Ghorzu", hp: 130, attackPwr: 30)
         
-        lblHpR.text = "\(soldier.name)\n\(soldier.hp) HP"
-        lblInvR.text = listInventory(soldier.inventory)
-
-        lblHpL.text = "\(orc.name)\n\(orc.hp) HP"
-        lblInvL.text = listInventory(orc.inventory)
+        dispCharacters()
+        dispInventory()
+        
     }
 
     @IBAction func orcAttackBtn(sender: AnyObject) {
         if soldier.attemptAttack(orc.attackPwr) {
             displayResLbl.text = "\(orc.name) attacked \(soldier.name) for \(orc.attackPwr) HP"
             
-            lblHpR.text = "\(soldier.name)\n\(soldier.hp) HP"
-            
-            
+            dispCharacters()
         }
     }
     
@@ -55,8 +51,7 @@ class ViewController: UIViewController {
         if orc.attemptAttack(soldier.attackPwr) {
             displayResLbl.text = "\(soldier.name) attacked \(orc.name) for \(soldier.attackPwr) HP"
             
-            lblHpL.text = "\(orc.name)\n\(orc.hp) HP"
-            
+            dispCharacters()
         }
     }
 
@@ -67,6 +62,16 @@ class ViewController: UIViewController {
             list += "\(item) \n"
         }
         return list
+    }
+    
+    func dispCharacters() {
+        lblHpR.text = "\(soldier.name)\n\(soldier.hp) HP"
+        lblHpL.text = "\(orc.name)\n\(orc.hp) HP"
+    }
+    
+    func dispInventory() {
+        lblInvR.text = listInventory(soldier.inventory)
+        lblInvL.text = listInventory(orc.inventory)
     }
 
 }
