@@ -45,7 +45,8 @@ class ViewController: UIViewController {
             dispCharacters()
         }
         if !soldier.isAlive {
-            displayResLbl.text = "Combat Over"
+            displayResLbl.text = "Combat Over ... \(orc.name) Won 👍"
+            lblHpR.text = "\(soldier.name)\n 0 HP"
         }
     }
     
@@ -57,7 +58,8 @@ class ViewController: UIViewController {
             dispCharacters()
         }
         if !orc.isAlive {
-            displayResLbl.text = "Combat Over"
+            displayResLbl.text = "Combat Over ... \(soldier.name) Won 👍"
+            lblHpL.text = "\(orc.name)\n 0 HP"
         }
     }
 
