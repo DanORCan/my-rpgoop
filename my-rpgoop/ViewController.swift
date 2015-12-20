@@ -44,6 +44,9 @@ class ViewController: UIViewController {
             
             dispCharacters()
         }
+        if !soldier.isAlive {
+            displayResLbl.text = "Combat Over"
+        }
     }
     
     @IBAction func soldierAttackBtn(sender: AnyObject) {
@@ -52,6 +55,9 @@ class ViewController: UIViewController {
             displayResLbl.text = "\(soldier.name) attacked \(orc.name) for \(soldier.attackPwr) HP"
             
             dispCharacters()
+        }
+        if !orc.isAlive {
+            displayResLbl.text = "Combat Over"
         }
     }
 

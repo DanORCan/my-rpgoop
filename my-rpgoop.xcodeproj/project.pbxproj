@@ -17,6 +17,7 @@
 		433B3EEF1C1F6B780047D0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433B3EED1C1F6B780047D0F4 /* Main.storyboard */; };
 		433B3EF11C1F6B780047D0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433B3EF01C1F6B780047D0F4 /* Assets.xcassets */; };
 		433B3EF41C1F6B780047D0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433B3EF21C1F6B780047D0F4 /* LaunchScreen.storyboard */; };
+		43A7CDCF1C2629E20008A878 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A7CDCE1C2629E20008A878 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		433B3EF01C1F6B780047D0F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		433B3EF31C1F6B780047D0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		433B3EF51C1F6B780047D0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43A7CDCE1C2629E20008A878 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				431F19421C23AE4D000E14F7 /* Soldier.swift */,
 				431F19441C23BFEF000E14F7 /* Orc.swift */,
 				431F19461C23C3FA000E14F7 /* Ghorzu.swift */,
+				43A7CDCE1C2629E20008A878 /* Game.swift */,
 				433B3EED1C1F6B780047D0F4 /* Main.storyboard */,
 				433B3EF01C1F6B780047D0F4 /* Assets.xcassets */,
 				433B3EF21C1F6B780047D0F4 /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 			files = (
 				431F19471C23C3FA000E14F7 /* Ghorzu.swift in Sources */,
 				431F19411C23A411000E14F7 /* Character.swift in Sources */,
+				43A7CDCF1C2629E20008A878 /* Game.swift in Sources */,
 				431F19451C23BFEF000E14F7 /* Orc.swift in Sources */,
 				433B3EEC1C1F6B780047D0F4 /* ViewController.swift in Sources */,
 				431F19431C23AE4D000E14F7 /* Soldier.swift in Sources */,
