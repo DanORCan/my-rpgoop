@@ -113,8 +113,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGt-aL-uhb" userLabel="Restart Button">
                                 <rect key="frame" x="268" y="21" width="64" height="64"/>
                                 <state key="normal" image="restart_0"/>
+                                <connections>
+                                    <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCv-XK-H1o"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display results of actions." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Ne-Ba2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display results of actions." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NQ-Ne-Ba2">
                                 <rect key="frame" x="98" y="556" width="403" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="00F-Ez-aDG"/>
@@ -190,6 +193,9 @@
                         <outlet property="lblHpR" destination="akX-Ny-sfL" id="p27-UR-Ukl"/>
                         <outlet property="lblInvL" destination="3EI-qg-3NX" id="ehe-GJ-KXM"/>
                         <outlet property="lblInvR" destination="1fX-mm-UId" id="1gg-uV-Wcx"/>
+                        <outlet property="orcAttackBtn" destination="ZcE-PB-Qm6" id="VMY-R3-u9D"/>
+                        <outlet property="restartBtn" destination="DGt-aL-uhb" id="KpH-W7-UR9"/>
+                        <outlet property="soldierAttackBtn" destination="5AW-Fs-NbM" id="anj-G3-MW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
