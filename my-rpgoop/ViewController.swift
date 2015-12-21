@@ -65,10 +65,15 @@ class ViewController: UIViewController {
         
         if orc.attemptAttack(soldier.attackPwr) {
             displayResLbl.text = "\(soldier.name) attacked \(orc.name) for \(soldier.attackPwr) HP"
-            
+
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: "orcAttackBtnHide", userInfo: nil, repeats: false)
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector: "orcAttackBtnReveal", userInfo: nil, repeats: false)
+           
             dispCharacters()
         }
         if !orc.isAlive {
+            timer1.invalidate()
+            timer2.invalidate()
             displayResLbl.text = "Combat Over ... \(soldier.name) Won 👍"
             lblHpL.text = "\(orc.name)\n 0 HP"
             dispMiscButtons()
@@ -113,6 +118,16 @@ class ViewController: UIViewController {
     func soldierAttackBtnReveal() {
         soldierAttackBtn.hidden = false
         lblAttackR.hidden = false
+    }
+
+    func orcAttackBtnHide() {
+        orcAttackBtn.hidden = true
+        lblAttackL.hidden = true
+    }
+    
+    func orcAttackBtnReveal() {
+        orcAttackBtn.hidden = false
+        lblAttackL.hidden = false
     }
 
     
