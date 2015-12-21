@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     var soldier: Soldier!
     var orc: Orc!
+    var timer1 = NSTimer()
+    var timer2 = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +45,19 @@ class ViewController: UIViewController {
     @IBAction func orcAttackBtn(sender: AnyObject) {
         if soldier.attemptAttack(orc.attackPwr) {
             displayResLbl.text = "\(orc.name) attacked \(soldier.name) for \(orc.attackPwr) HP"
+
+            timer1 = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: "soldierAttackBtnHide", userInfo: nil, repeats: false)
+            timer2 = NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector: "soldierAttackBtnReveal", userInfo: nil, repeats: false)
             
             dispCharacters()
         }
         if !soldier.isAlive {
+            timer1.invalidate()
+            timer2.invalidate()
             displayResLbl.text = "Combat Over ... \(orc.name) Won 👍"
             lblHpR.text = "\(soldier.name)\n 0 HP"
             dispMiscButtons()
+            
         }
     }
     
@@ -96,6 +104,17 @@ class ViewController: UIViewController {
         lblAttackL.hidden = true
         lblAttackR.hidden = true
     }
+    
+    func soldierAttackBtnHide() {
+        soldierAttackBtn.hidden = true
+        lblAttackR.hidden = true
+    }
+    
+    func soldierAttackBtnReveal() {
+        soldierAttackBtn.hidden = false
+        lblAttackR.hidden = false
+    }
+
     
     func startGame() {
         
