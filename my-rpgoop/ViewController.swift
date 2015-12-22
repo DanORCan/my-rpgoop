@@ -57,6 +57,11 @@ class ViewController: UIViewController {
             displayResLbl.text = "Combat Over ... \(orc.name) Won 👍"
             lblHpR.text = "\(soldier.name)\n 0 HP"
             dispMiscButtons()
+            if !(soldier.giveUpInventory() == nil) {
+                orc.addItemToInventory(soldier.giveUpInventory()!)
+                dispInventory()
+                
+            }
             
         }
     }
@@ -77,6 +82,10 @@ class ViewController: UIViewController {
             displayResLbl.text = "Combat Over ... \(soldier.name) Won 👍"
             lblHpL.text = "\(orc.name)\n 0 HP"
             dispMiscButtons()
+            if !(orc.giveUpInventory() == nil) {
+                soldier.addItemToInventory(orc.giveUpInventory()!)
+                dispInventory()
+            }
         }
     }
 

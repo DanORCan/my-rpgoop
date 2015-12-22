@@ -44,4 +44,6 @@ class Character {
         self._hp -= attackPwr
         return true
     }
+    
+    
 }

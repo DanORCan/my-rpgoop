@@ -17,7 +17,7 @@ class Orc: Character {
         }
     }
     
-    private var _inventory: [String] = ["club","knife","shield","beer","leather"]  //basic inventory
+    private var _inventory: [String] = ["club","knife"]  //basic inventory
     
     var inventory: [String] {
         return _inventory
@@ -32,7 +32,7 @@ class Orc: Character {
         _name = name
     }
     
-    func loseInventory() -> String? {
+    func giveUpInventory() -> String? {
         if !isAlive {
             
             let rand = Int(arc4random_uniform(UInt32(inventory.count)))
